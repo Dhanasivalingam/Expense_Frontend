@@ -1,7 +1,9 @@
+import axios from "axios"
+
 const ExpenseItem = (props)=>{
-    const {id, title , amount,deleteExpense} = props
+    const {_id, title , amount,deleteExpense} = props
     const handleDelete=()=>{
-        deleteExpense(id)
+        deleteExpense(_id)
     }
     return(
         <div className="exp-item-container">

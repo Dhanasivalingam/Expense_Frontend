@@ -22,7 +22,6 @@ const Inserting=(props)=>{
                     setErrors({...err})
                     return
                 }
-                // axios.post('https://expensetracker-tea5.onrender.com/add-entry',({"title":title,"amount":amount}))
                 addExpense(title, parseInt(amount))
                 setTitle('')
                 setAmount('')

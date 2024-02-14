@@ -18,17 +18,18 @@ const App = () =>{
         setExpenses([...expenses,{id:nextId, title:title,amount:amount}])
         axios.post('https://expensetracker-tea5.onrender.com/add-entry',({"title":title,"amount":parseInt(amount)}))
     }
-    const deleteExpense=(id)=>{
-        setExpenses(expenses.filter((e)=>e.id!==id))
+    const deleteExpense=(_id)=>{
+        setExpenses(expenses.filter((e)=>e._id !== _id))
+        axios.delete('https://expensetracker-tea5.onrender.com/delete-entries?id='+_id)
     }
     var income=0
     var expamount =0
     {expenses.forEach((expense)=>{
         if(expense.amount>0){
-            income = (income+expense.amount)
+            income = income+expense.amount
         }
         else{
-            expamount = (expamount+expense.amount)
+            expamount = expamount+expense.amount
         }
     })}
     return(
@@ -52,9 +53,9 @@ const App = () =>{
         </div>
         {expenses.map((expense)=>(
             <ExpenseItem 
-            key={expense.id} 
+            key={expense._id} 
             title={expense.title} 
-            id={expense.id} 
+            _id={expense._id} 
             amount={expense.amount}
             deleteExpense={deleteExpense}
              />
