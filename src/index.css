@@ -1,0 +1,135 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.expense-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 10px;
+  /* box-shadow: 0 2px 8px black; */
+  background-color: aliceblue;
+  max-width: 350px;
+  flex-grow: 1;
+}
+.expense-item.positive{
+  border-right: 5px solid green;
+}
+.expense-item.negative{
+  border-right: 5px solid red;
+}
+.income-expense-container{
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 10px;
+  /* box-shadow: 0 2px 8px black; */
+  background-color: aliceblue;
+  max-width: 350px
+}
+.income, .expense{
+  display:flex ;
+  flex-direction: column;
+  align-items: center;
+}
+.income .title,
+.expense .title{
+  font-size: 19px;
+  color: black;
+}
+.income{
+  color: green;
+  font-weight: bold;
+}
+.expense{
+  color: red;
+  font-weight: bold;
+}
+.block{
+  width: 4px;
+  background-color: black;
+  border-radius: 10px;
+}
+.insert{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.balance{
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 10px;
+  /* box-shadow: 0 2px 8px black; */
+  background-color: aliceblue;
+  max-width: 350px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.header{
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 700;
+}
+form{
+  display: flex;
+  align-content: space-between;
+  flex-direction: column;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 10px;
+  /* box-shadow: 0 2px 8px black; */
+  background-color: aliceblue;
+  max-width: 350px;
+  font-weight: 500;
+}
+.insert-title{
+  display: flex;
+  flex-direction: column;
+}
+.insert-amount{
+  display: flex;
+  flex-direction: column;
+}
+
+button{
+  max-width: fit-content;
+  align-self: center;
+  margin-top: 20px;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background-color: #f4f4f4;
+  cursor: pointer;
+}
+input{
+  height: 30px;
+  border-radius: 5px;
+  border-style: none;
+}
+form .error{
+  color: red;
+  font-size: 10px;
+}
+.exp-item-container{
+  display: flex;
+  align-items: center;
+  margin: 1rem auto;
+  max-width: 400px;
+  gap :10px
+}
+.delete-btn{
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background-color: #5e08a0;
+  color: #f4f4f4;
+  cursor: pointer;
+}
